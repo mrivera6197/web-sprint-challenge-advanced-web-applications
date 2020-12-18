@@ -33,6 +33,7 @@ const Bubbles = ({ colors }) => {
                   return (
                     <Circle
                       key={key}
+                      data-testid='bubbles'
                       cx={x}
                       cy={y}
                       r={r}
