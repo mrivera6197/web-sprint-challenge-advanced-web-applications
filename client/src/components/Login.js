@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledLogin = styled.div`
@@ -45,6 +46,7 @@ const Login = () => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
   const [formValues, setFormValues] = useState(initialValues)
+  const { push } = useHistory()
 
   const handleChange = e => {
     setFormValues({
@@ -58,6 +60,7 @@ const Login = () => {
     .then(res => {
       localStorage.setItem('token', res.data.payload)
     })
+    .then(push('/api/colors'))
     .catch(err => {
       console.log(err)
     })
