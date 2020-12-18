@@ -98,7 +98,6 @@ const ColorList = ({ colors, getData }) => {
         </form>
       )}
       <div className="spacer" />
-      {/* stretch - build another form here to add a color */}
     </div>
   );
 };

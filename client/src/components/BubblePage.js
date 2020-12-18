@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
+import NewColorForm from './NewColorForm'
 
 import { fetchColors } from '../api/fetchColors'
 
@@ -29,6 +30,7 @@ const BubblePage = () => {
     <>
       <ColorList colors={colorList} getData={getData} />
       <Bubbles colors={colorList} />
+      <NewColorForm getData={getData}/>
     </>
   );
 };
